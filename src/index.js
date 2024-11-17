@@ -13,12 +13,12 @@ import { User } from "./components/User";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Home />,
-    errorElement: <NotFound />
+    errorElement: <NotFound />,
   },
   {
-    path: '/user',
+    path: "/user",
     element: <User />,
   },
 ]);
@@ -26,7 +26,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
 
