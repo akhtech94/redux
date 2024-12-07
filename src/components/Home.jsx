@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { CurrentUser } from "./CurrentUser";
 
 export const Home = () => {
-  const currentUser = useSelector((state) => state.currentUser);
+  const currentUser = useSelector((state) => state.user.currentUser);
 
   return (
     <>

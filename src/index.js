@@ -10,6 +10,7 @@ import reportWebVitals from "./reportWebVitals";
 import { Home } from "./components/Home";
 import { NotFound } from "./components/NotFound";
 import { User } from "./components/User";
+import { Product } from "./components/Product";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/user",
     element: <User />,
+  },
+  {
+    path: "/product",
+    element: <Product />,
   },
 ]);
 
