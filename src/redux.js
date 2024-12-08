@@ -34,9 +34,30 @@ const productReducer = (currentState = initialState_products, action) => {
   }
 };
 
+const initialState_todos = {
+  todosList: [],
+  error: "",
+};
+
+const todosReducer = (currentState = initialState_todos, action) => {
+  switch (action.type) {
+    case "FETCH_TODOS_SUCCESS":
+      return {
+        todosList: action.payLoad.todos,
+      };
+    case "FETCH_TODOS_FAILURE":
+      return {
+        error: action.payLoad.error,
+      };
+    default:
+      return currentState;
+  }
+};
+
 const rootReducer = combineReducers({
   user: userReducer,
   product: productReducer,
-})
+  todos: todosReducer,
+});
 
 export const store = createStore(rootReducer, applyMiddleware(thunk));

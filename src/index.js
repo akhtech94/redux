@@ -11,6 +11,7 @@ import { Home } from "./components/Home";
 import { NotFound } from "./components/NotFound";
 import { User } from "./components/User";
 import { Product } from "./components/Product";
+import { Todos } from "./components/Todos";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/product",
     element: <Product />,
+  },
+  {
+    path: "/todos",
+    element: <Todos />,
   },
 ]);
 

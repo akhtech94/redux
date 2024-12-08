@@ -20,7 +20,12 @@ export const User = () => {
       {currentUser ? (
         <>
           <p>Logged in as {currentUser.userName}</p>
-          <Link to="/product">Product</Link>
+          <div>
+            <Link to="/product">Product</Link>
+          </div>
+          <div>
+            <Link to="/todos">Todos</Link>
+          </div>
         </>
       ) : (
         <div>
